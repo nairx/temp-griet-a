@@ -39,12 +39,32 @@
             <p>
                 <input type="number" placeholder="Enter Age">
             </p>
+            <p><textarea rows="4" cols="80"></textarea></p>
+            <p>
+                <input list="city">
+                
+                <datalist id="city">
+                    <option>Hyderabad</option>
+                    <option>NYC</option>
+                    <option>Bengaluru</option>
+                    <option>Delhi</option>
+                    <option>Jacksonville</option>
+                    <option>Cincinatti</option>
+                </datalist>
+            </p>
             <p>
                 State:<br>
-                <select multiple>
+                <select>
+                    <optgroup label="India">
                     <option>Telangana</option>
                     <option>Andra Pradesh</option>
                     <option>Kerala</option>
+                </optgroup>
+                <optgroup label="US">
+                    <option>New York</option>
+                    <option>Ohio</option>
+                    <option>Florida</option>
+                    </optgroup>
                 </select>
             </p>
         </fieldset>
@@ -69,6 +89,47 @@
         <!-- <input type="button" value="Submit"> -->
         <input type="reset">
     </form>
-    
+
+    <hr>
+    <form>
+        <p><input type="email"></input></p>
+        <p> <input type="date"/></p>
+        <p> <input type="time"/></p>
+        <p> <input type="datetime-local"/></p>
+        <p> <input type="month"/></p>
+        <p> <input type="week"/></p>
+        <p> <input type="color"/></p>
+        <p> <input type="file"/></p>
+        <p> <input type="url"/></p>
+        <button>Submit</button>
+    </form>
+    <hr>
+    <table border="1">
+        <colgroup>
+        <col span="2" style="background-color: blue;">
+       <col style="background-color: teal;">  
+      </colgroup>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Score</th>
+        </tr>
+  
+        <tr>
+          <td>John</td>
+          <td>Jax</td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td>Mike</td>
+          <td>Jax</td>
+          <td>56</td>
+        </tr>
+  
+        <tr>
+          <td colspan="2">Total</td>
+          <td>90</td>
+        </tr>
+      </table>
 </body>
 </html>
