@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function chkUser(){
+        function chkUser(e){
             let username = document.getElementById("name").value
             let password = document.getElementById("pwd").value
-            if (username !== "john@gmail.com" || password !=="1234"){
+            if (username == "" || password == ""){
+                msg.innerHTML = "Email Address and Password cannot be blank"
+            }
+            else if (username !== "john@gmail.com" || password !=="1234"){
                 msg.innerHTML = "Access Denied"
             }
             else {
@@ -16,15 +19,40 @@
             }
         }
     </script>
+    <style>
+        .container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .box {
+            border: 2px solid silver;
+            padding: 20px;
+            width: 400px;
+            border-radius: 20px;
+        }
+        input{
+            padding: 20px;
+            width: 90%;
+        }
+        button{
+            background-color: blue;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            color:white;
+           font-size: xx-large;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <form>
-        <p><div id="msg"></div></p>
-        <p><input type="text" required id="name" placeholder="Email address or phone number"></p>
-        <p><input type="password" required id="pwd" placeholder = "Password"></p>
-        <button onclick="chkUser()">Log in</button>
-    </form>
+    <div class="container">
+        <div class="box">
+            <p><div id="msg"></div></p>
+            <p><input type="text" id="name" placeholder="Email address or phone number"></p>
+            <p><input type="password"  id="pwd" placeholder = "Password"></p>
+            <button onclick="chkUser()">Log in</button>
+        </div>
     </div>
 </body>
 </html>
