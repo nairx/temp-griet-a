@@ -6,7 +6,16 @@
     <title>Document</title>
     <script>
         let users = []
-        function showData(){
+        function showUsers(){
+            let length = users.length
+            let str = ""
+            for(let i=0;i<length;i++){
+                str += `<div>${users[i].name}-${users[i].email}-${users.password}-${users.dob}</div>`
+            }
+            data.innerHTML = str
+        }
+
+        function addUser(){
             let name = document.getElementById("name").value 
             let email = document.getElementById("email").value 
             let password = document.getElementById("password").value 
@@ -18,12 +27,7 @@
                 dob:dob
             }
             users.push(user)
-            let length = users.length
-            let str = ""
-            for(let i=0;i<length;i++){
-                str += `<div>${users[i].name}-${users[i].email}-${users.password}-${users.dob}</div>`
-            }
-            data.innerHTML = str
+            showUsers()
             //data.innerHTML = `${name}, ${email}, ${password}, ${dob}`
         }
     </script>
@@ -34,7 +38,7 @@
     <p><input type="text" id="email"></p>
     <p><input type="password" id="password"></p>
     <p><input type="date" id="dob"></p>
-    <button onclick="showData()">Register</button>
+    <button onclick="addUser()">Register</button>
     <div id="data"></div>
 </body>
 </html>
