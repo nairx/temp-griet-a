@@ -114,7 +114,7 @@
       let dd = null;
       let mm;
       let yy;
-      let pronoun = "";
+      let pronoun;
       let g = "";
       const showData = () => {
         firstname = document.getElementById("firstname").value;
@@ -159,7 +159,9 @@
         day.innerHTML = str;
         str = "";
         for (let i = 0; i <= 11; i++) {
-          str += `<option value=${i} ${i === m && "selected"}>${months[i]}</option>`;
+          str += `<option value=${i} ${i === m && "selected"}>${
+            months[i]
+          }</option>`;
         }
         month.innerHTML = str;
         str = "";
@@ -218,10 +220,10 @@
 
      <div class="row">
       <select id="prSelect" style="display:none">
-        <option value="NA">Select your pronoun</option>
-        <option value="She">She:"Wish her a happy birthday"</option>
+        <option value="NA" >Select your pronoun</option>
+        <option value="She" >She:"Wish her a happy birthday"</option>
         <option value="He">He:"Wish him a happy birthday"</option>
-        <option value="They">They:"Wish them a happy birthday"</option>
+        <option value="They" >They:"Wish them a happy birthday"</option>
       </select>
      </div>
 
