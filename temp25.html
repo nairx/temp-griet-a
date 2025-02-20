@@ -111,9 +111,9 @@
       let email = "";
       let password = "";
       let gender = 0;
-      let day = "";
-      let month = "";
-      let year = "";
+      let dd = "";
+      let mm;
+      let yy;
       let pronoun = "";
       let g = "";
       const showData = () => {
@@ -123,9 +123,10 @@
         password = document.getElementById("password").value;
         gender = document.getElementsByName("gender");
         pronoun = document.getElementById("prSelect").value;
-        let day = document.getElementById("day").value;
-        let month = document.getElementById("month").value;
-        let year = document.getElementById("year").value;
+        dd = document.getElementById("day").value;
+        mm = document.getElementById("month").value;
+        yy = document.getElementById("year").value;
+        console.log(dd, mm, yy);
         let dob = `${day}-${month}-${year}`;
         g = "";
         if (gender[0].checked) g = "Female";
